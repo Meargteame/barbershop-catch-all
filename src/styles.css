@@ -142,3 +142,55 @@
     color: var(--color-foreground);
   }
 }
+
+/* ===== Leon's Lab funnel brand tokens ===== */
+:root {
+  --ll-navy: oklch(0.19 0.03 255);
+  --ll-navy-soft: oklch(0.29 0.035 253);
+  --ll-coral: oklch(0.67 0.21 34);
+  --ll-coral-strong: oklch(0.61 0.21 33);
+  --ll-brass: oklch(0.7 0.09 78);
+  --ll-brass-ink: oklch(0.56 0.1 72);
+  --ll-cream: oklch(0.96 0.015 85);
+  --ll-cream-ink: oklch(0.24 0.012 75);
+  --ll-cream-muted: oklch(0.47 0.02 80);
+  --ll-dark-ink: oklch(0.96 0.015 85);
+  --ll-dark-muted: oklch(0.75 0.025 250);
+  --ll-line-dark: oklch(0.96 0.015 85 / 14%);
+  --ll-line-cream: oklch(0.24 0.012 75 / 16%);
+}
+
+@theme inline {
+  --color-navy: var(--ll-navy);
+  --color-navy-soft: var(--ll-navy-soft);
+  --color-coral: var(--ll-coral);
+  --color-coral-strong: var(--ll-coral-strong);
+  --color-brass: var(--ll-brass);
+  --color-brass-ink: var(--ll-brass-ink);
+  --color-cream: var(--ll-cream);
+  --color-cream-ink: var(--ll-cream-ink);
+  --color-cream-muted: var(--ll-cream-muted);
+  --color-dark-ink: var(--ll-dark-ink);
+  --color-dark-muted: var(--ll-dark-muted);
+  --color-line-dark: var(--ll-line-dark);
+  --color-line-cream: var(--ll-line-cream);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@utility safe-x {
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+@utility safe-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+@utility safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
