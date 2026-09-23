@@ -375,16 +375,16 @@ function LandingPage() {
                   {shopType.toLowerCase() || "shop"} and reach out within one business day
                   with your free audit.
                 </div>
-              ) : step < 2 ? (
+              ) : current ? (
                 <div>
                   <span className="text-xs font-semibold uppercase tracking-[0.16em] text-brass">
-                    {STEPS[step].kicker}
+                    {current.kicker}
                   </span>
                   <h3 className="mt-3 font-display text-2xl font-medium">
-                    {STEPS[step].question}
+                    {current.question}
                   </h3>
                   <div className="mt-6 grid gap-3">
-                    {STEPS[step].options.map((option) => (
+                    {current.options.map((option) => (
                       <button
                         key={option}
                         type="button"
